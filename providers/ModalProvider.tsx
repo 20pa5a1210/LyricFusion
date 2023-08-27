@@ -1,21 +1,23 @@
 "use client";
 
 import AuthModal from "@/components/AuthModel";
+import UploadModal from "@/components/UploadModal";
 import { useEffect, useState } from "react";
 const ModalProvider: React.FC = () => {
-  const [isMounted, setIsMounted] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
 
-  if (!isMounted) return null;
+    if (!isMounted) return null;
 
-  return (
-    <>
-      <AuthModal />
-    </>
-  );
+    return (
+        <>
+            <AuthModal />
+            <UploadModal />
+        </>
+    );
 };
 
 export default ModalProvider;

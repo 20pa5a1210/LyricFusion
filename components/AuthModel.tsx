@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import useAuthModal from "@/hooks/useAuthModal";
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function AuthModal() {
     const supabaseClient = useSupabaseClient();
