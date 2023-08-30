@@ -1,8 +1,24 @@
+"use client"
 import Button from "@/components/Button";
 import Header from "@/components/Header";
+import { useUser } from "@/hooks/useUser";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 
 const Account = () => {
+    const router = useRouter()
+    const { isLoading, user } = useUser()
+
+
+    useEffect(() => {
+
+        if (!isLoading && !user) {
+            router.replace("/")
+        }
+
+    }, [user, isLoading, router])
+
     return (
         <div
             className="

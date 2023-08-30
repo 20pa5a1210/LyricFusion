@@ -1,5 +1,5 @@
-import SideBar from "@/components/SideBar";
 import "./globals.css";
+import SideBar from "@/components/SideBar";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import SupabaseProvider from "@/providers/SupabaseProvider";
@@ -12,7 +12,7 @@ import Player from "@/components/Player";
 const figTree = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Spotify Clone",
+    title: "Lyric Fusion",
     description: "Listen to music for free.",
 };
 export const revalidate = 0;
